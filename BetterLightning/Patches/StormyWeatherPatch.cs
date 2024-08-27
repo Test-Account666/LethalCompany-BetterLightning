@@ -75,10 +75,6 @@ public static class StormyWeatherPatch {
 
         BetterLightning.Logger.LogDebug($"Next Lightning Strike at: {strikePosition}");
 
-        var localPlayer = StartOfRound.Instance.localPlayerController;
-
-        localPlayer.TeleportPlayer(strikePosition);
-
         var timeDifference = stormyWeather.randomThunderTime - TimeOfDay.Instance.globalTime;
 
         BetterLightning.Logger.LogDebug($"TimeDifference? {timeDifference}");
